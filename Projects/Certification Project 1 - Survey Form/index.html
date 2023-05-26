@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">freeCodeCamp Survey Form Project</h1>
+        <p id="description" class="description text-center">First project ever, please let me know what you think.</p>
+      </header>
+      <form action="mailto:ash.wanders@gmail.com" method="get" enctype="text/plain" id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name"> First Name</label>
+          <input id="name" name="first-name" type="text" class="form-control" placeholder="Enter your first name" required />
+          <label id="last-name-label" for="last-name">Last Name</label>
+          <input id="last-name" name="last-name" type="text" class="form-control" placeholder="Enter your last name" required />
+          <label id="email-label" for="email">Email</label>
+          <input id="email" name="email" type="email" class="form-control" placeholder="Enter your email" required />
+          <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+          <input id="number" name="age" type="number" min="13" max="99" class="form-control" placeholder="Enter your age" />
+        </div>
+
+        <div class="form-group">
+          <p>Would you recommend my work?</p>
+          <label>
+            <input name="user-recommand" value="defintely" type="radio" class="input-radio" checked/> 
+            Definitely
+          </label>
+          <label>
+            <input name="user-recommand" value="maybe" type="radio" class="input-radio" /> 
+            Maybe</label>
+          <label>
+            <input name="user-recommand" value="not-sure" type="radio" class="input-radio" /> 
+            Not sure
+          </label>
+        </div>
+
+        <div class="form-group">
+        <p>How did you hear about me? </p>
+            <select id="dropdown" name="referrer" class="form-control">
+              <option disabled selected value>(select one)</option>
+              <option value="website">freeCodeCamp Website</option>
+              <option value="linkedin">LinkedIn</option>
+              <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+          <p>
+            What do you think should be improved on this page?
+            </br>
+            <span class="clue">(Check all that apply)</span>
+          </p>
+          <label>
+            <input id="great" type="checkbox"  value="great" class="input-checkbox" /> It's great as it is now.
+          </label>
+          <label>
+            <input id="" type="checkbox"  value="section" class="input-checkbox" /> Add another section.
+          </label>
+          <label for="different-background">
+            <input id="different-background" type="checkbox"  value="different-background" class="input-checkbox" /> Change the background.
+          </label>
+          <label for="different-colors">
+            <input id="different-colors" type="checkbox"  value="different-colors" class="input-checkbox" />Should use different colors.
+          </label>
+          <label for="layout">
+            <input id="layout" type="checkbox"  value="layout" class="input-checkbox" /> Change the layout.
+          </label>
+          <label for="other">
+            <input id="other" type="checkbox"  value="other" class="input-checkbox" /> Other <span class="clue">(Please feel free to detail in the comments section)
+          </label>
+        </div>
+
+        <div class="form-group">
+          <p>Any comments or suggestions?</p>
+            <textarea id="comments" class="input-textarea" name="comment" rows="3" cols="30" placeholder="Help me improve, enter your comment here..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
